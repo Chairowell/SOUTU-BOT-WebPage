@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./favicon.ico" type="image/x-icon">
+
+    <title>搜图Bot酱</title>
+    
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./iconfont.css">
+
+    <!-- 这边把https://soutubot.moe去掉就行，只是为了本地测试 -->
+    <script language="JavaScript">
+        function checkaction(v) {
+            if (v == 1) {
+                document.dbform.action = "https://soutubot.moe/api/cn_en_jp";
+            } else if (v == 2) {
+                document.dbform.action = "https://soutubot.moe/api/jp";
+            } else if (v == 4) {
+                document.dbform.action = "https://soutubot.moe/api/cn_en_jp?factor=1.4";
+            } else if (v == 5) {
+                document.dbform.action = "https://soutubot.moe/api/jp?factor=1.2";
+            } else {
+                document.dbform.action = "https://soutubot.moe/api/cn_en_jp";
+            }
+            dbform.submit();
+        }
+    </script>
+
+</head>
+
+<body>
+
+        <div class="box">
+            <div class="icon"><img src="favicon.ico" alt=""></div>
+            <div class="title">搜图Bot酱</div>
+            <div class="search">
+                <!-- 数据提交的部分参数数都没变，都是按找原来的搬过来的，直接可以用 -->
+                <form action="https://soutubot.moe/" method="post" name="dbform" enctype="multipart/form-data">
+                    <div class="fileBox">
+                        <div class="fileInfo">点击选择或拖入文件</div>
+                        <!-- 这里文件限制加了一个.jfif格式，希望可以支持 -->
+                        <input class="imageFile" type="file" name="file" accept=".png, .jpg, .jpeg, .webp, .jfif">
+                    </div>
+                    <div class="Btn">
+                        <input class="searchBtn" type="submit" value="NH全部语言搜索" title="nhentai" onclick="checkaction(1);">
+                        <input class="searchBtn" type="submit" value="严格模式 - 不推荐" title="不推荐" onclick="checkaction(4);">
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="said">
+                <h2>（ﾉ>ω<)ﾉ大家好！这里是搜图bot酱网页版(BETA)！可局部搜图NH内的本子，欢迎大家来测试！</h2>
+                <h2>（。>﹏<）不过目前网页很简陋…同时具有一定局限性</h2>
+                <h2>如果大家觉得好用的话就请麻烦能多多宣传和赞助一下！毕竟目前服务器费用<a href="./server-pay.png">非常昂贵(300欧元/月)</a>……最后谢谢大家的支持！</h2>
+            </div>
+            <div class="explain">Copyright 2022-2023 <a href="https://soutubot.moe/" title="@soutubot">搜图Bot酱©</a></div>
+            <div class="link">
+                <a href="https://github.com/lolishinshi/imsearch"><span class="iconfont icon-github"></span></a>
+                <a href="https://t.me/soutubot"><span class="iconfont icon-robot1"></span></a>
+                <a href="https://t.me/Soutubot_Chan"><span class="iconfont icon-telegram"></span></a>
+                <a href="https://www.patreon.com/soutubot"><span class="iconfont icon-bxl-patreon"></span></a>
+                <a href="https://afdian.net/@soutubot"><span class="iconfont icon-lightning"></span></a>
+            </div>
+        </div>
+
+    <!-- 可以加个友链吗 www.chairo.cc -->
+</body>
+
+</html>

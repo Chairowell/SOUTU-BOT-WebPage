@@ -1,0 +1,259 @@
+/* 重置样式 */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.1 | 20191019
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+	display: block;
+}
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+    display: none;
+}
+body {
+	line-height: 1;
+}
+menu, ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* 以上不是必须，可以删掉以简化代码 */
+
+body{
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    background: #808080 no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: center center;
+    backdrop-filter: blur(4px) brightness(35%);
+    -webkit-backdrop-filter: blur(4px) brightness(35%);
+
+    background-image: url(./background/2.jpg);
+}
+a{
+    text-decoration: none;
+}
+.box{
+    color: #fff;
+    max-width: 730px;
+    width: 60vw;
+    margin: 0 auto;
+    position: relative;
+    top: 12vh;
+    padding: 30px 20px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.302);
+    backdrop-filter: blur(4px) brightness(60%);
+    -webkit-backdrop-filter: blur(4px) brightness(60%);
+}
+.icon,.title{
+    text-align: center;
+}
+.icon img{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    box-shadow: 0 0 12px 6px #fff;
+}
+.title{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 12px;
+}
+.fileBox{
+    width: 90%;
+    height: 100px;
+    margin: 16px auto;
+    border: 4px dashed #acacac;
+    transition: all 0.3s;
+    border-radius: 6px;
+}
+.fileInfo{
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 100px; 
+}
+.fileBox:hover{
+    border: 4px dashed #fff;
+    transition: all 0.3s;
+}
+.imageFile{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: -100px;
+    opacity: 0;
+    border: 1px solid #fff;
+}
+.Btn{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.searchBtn{
+    flex: 1;
+    height: 36px;
+    margin: 6px;
+    border: none;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 12px;
+    font-weight: 600;
+}
+.searchBtn:hover{
+    background: #acacac;
+    transition: all 0.2s;
+}
+.searchBtn:active{
+    background: #5c5c5c;
+}
+.said{
+    margin: 10px 30px;
+}
+.said h2{
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+}
+h2 a{
+    color: #fa858f;
+}
+.link a{
+    float: right;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    border-radius: 100%;
+    margin: 12px;
+    background: #fff;
+    box-shadow: 0 0 3px 1px #88888888;
+}
+.link a:nth-child(1){
+    background: #000;
+    color: #fff;
+}
+.link a:nth-child(2){
+    background: #72a2fc;
+    color: #fff;
+}
+.link a:nth-child(3){
+    background: #3076fa;
+    color: #fff;
+}
+.link a:nth-child(4){
+    background: #fc4d4d;
+    color: #fff;
+}
+.link a:nth-child(5){
+    background: #ffffff;
+    color: #ce6bdb;
+}
+.explain{
+    margin: 18px;
+    text-align: center;
+    color: #ccc;
+    font-size: 12px;
+}
+.explain a{
+    color: #ccc;
+}
+
+@media (max-width: 500px) {
+    .icon img{
+        width: 36px;
+        height: 36px;
+    }
+    .title{
+        font-size: 14px;
+    }
+    .fileBox{
+        height: 42px;
+        margin: 6px auto;
+    }
+    .fileInfo{
+        line-height: 42px;
+    }
+    .imageFile{
+        top: -42px;
+    }
+    .Btn{
+        width: 100%;
+    }
+    .searchBtn{
+        margin: 3px ;
+    }
+    .said{
+        margin: 6px 3px;
+    }
+    .link{
+        margin: 0 3px;
+    }
+    .link a{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin: 16px 6px;
+    }
+}
+@media (max-width:320px) {
+    .box{
+        padding: 16px 10px;
+    }
+    .searchBtn{
+        height: 24px;
+    }
+    .said h2{
+        font-size: 10px;
+        line-height: 18px;
+    }
+    .explain{
+        margin: 16px;
+    }
+    .link a{
+        margin: 1px 3px;
+    }
+}
